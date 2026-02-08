@@ -1,0 +1,897 @@
+/* ============================================
+   FONT IMPORTS & BASE SETUP
+   ============================================ */
+
+@font-face {
+    font-family: 'bentonsansregular';
+    src: url('bentonsans-regular-webfont.woff2') format('woff2'),
+         url('bentonsans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.7;
+    color: #121212;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* ============================================
+   TOP NAVIGATION BAR
+   ============================================ */
+
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e6e6e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    z-index: 1000;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.nav-center{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-logo{
+    height: clamp(24px, 5vw, 30px);
+    width: auto;
+}
+
+.nav-date {
+    font-size: clamp(10px, 2vw, 12px);
+    font-weight: 600;
+    color: #121212;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.nav-social {
+    display: flex;
+    gap: clamp(10px, 2vw, 18px);
+}
+
+.nav-social a {
+    color: #121212;
+    font-size: clamp(12px, 2vw, 14px);
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+
+.nav-social a:hover {
+    color: #1493B3;
+}
+
+/* ============================================
+   MASTHEAD
+   ============================================ */
+
+.masthead {
+    margin-top: 40px;
+    padding: 30px 0 20px;
+    text-align: center;
+    border-bottom: 2px solid #121212;
+    background-color: #ffffff;
+}
+
+.masthead-logo img {
+    height: 60px;
+    filter: brightness(0);
+}
+
+/* ============================================
+   EDITION BANNER
+   ============================================ */
+
+.edition-banner {
+    text-align: center;
+    padding: 50px 20px 40px;
+    background: linear-gradient(135deg, #A1D6F7 0%, #C7EDAF 100%);
+    border-bottom: 4px double #1493B3;
+}
+
+.edition-label {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #1493B3;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.edition-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(3rem, 7vw, 5rem);
+    font-weight: 900;
+    color: #121212;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+.edition-subtitle {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    font-weight: 400;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.edition-divider {
+    width: 60px;
+    height: 2px;
+    background-color: #32AD7E;
+    margin: 0 auto;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero-section {
+    max-width: 1200px;
+    width: 100%;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.hero-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-image img {
+    max-height: 80vh;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+    border: 1px solid #e6e6e6;
+}
+
+.hero-content {
+    padding: 20px 0;
+}
+
+.hero-kicker {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1493B3;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.hero-headline {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: #121212;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.hero-dek {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.hero-byline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.byline-text {
+    font-weight: 600;
+    color: #121212;
+}
+
+.byline-divider {
+    color: #ccc;
+}
+
+.byline-date {
+    color: #666;
+}
+
+.hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1493B3;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    padding: 12px 24px;
+    border: 2px solid #1493B3;
+    background-color: transparent;
+}
+
+.hero-cta:hover {
+    background-color: #1493B3;
+    color: #ffffff;
+}
+
+.hero-cta i {
+    font-size: 12px;
+}
+
+/* ============================================
+   COUNTDOWN TIMER SECTION
+   ============================================ */
+
+.countdown-section {
+    margin: 40px 0;
+    padding: 40px 30px;
+    background: linear-gradient(135deg, #A1D6F7 0%, #C7EDAF 100%);
+    border-radius: 8px;
+    border: 2px solid #1493B3;
+}
+
+.countdown-container {
+    text-align: center;
+}
+
+.countdown-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    color: #121212;
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+}
+
+.countdown-display {
+    display: flex;
+    justify-content: center;
+    gap: clamp(20px, 4vw, 40px);
+    flex-wrap: wrap;
+}
+
+.countdown-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+}
+
+.countdown-number {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    color: #1493B3;
+    line-height: 1;
+    margin-bottom: 8px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-label {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+    font-weight: 700;
+    color: #121212;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* ============================================
+   LETTER FROM EDITOR SECTION
+   ============================================ */
+
+.letter-section {
+    background-color: #f8f8f8;
+    padding: 60px 20px;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.letter-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.letter-label {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #32AD7E;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.letter-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.letter-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #121212;
+    margin-bottom: 10px;
+}
+
+.letter-author {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.letter-text p {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.letter-signature {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #121212;
+    margin-top: 30px;
+}
+
+.letter-image {
+    position: sticky;
+    top: 80px;
+}
+
+.letter-image img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   MAIN CONTENT GRID
+   ============================================ */
+
+.content-grid {
+    max-width: 1200px;
+    width: 100%;
+    margin: 60px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 40px;
+}
+
+/* ============================================
+   STORY CARDS
+   ============================================ */
+
+.story {
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 30px;
+}
+
+.story-lead {
+    grid-column: 1 / -1;
+    padding-bottom: 50px;
+    border-bottom: 2px solid #121212;
+}
+
+.story-feature {
+    grid-column: 1 / -1;
+    padding-bottom: 50px;
+    border-bottom: 2px solid #e6e6e6;
+}
+
+.story-kicker {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #1493B3;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.story-headline {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: #121212;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.story-headline-secondary {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+    font-weight: 700;
+    line-height: 1.3;
+    color: #121212;
+    margin-bottom: 12px;
+    letter-spacing: -0.3px;
+}
+
+.story-dek {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.story-byline {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.story-byline span {
+    display: inline-block;
+}
+
+.byline-divider {
+    color: #ccc;
+}
+
+.story-figure {
+    margin: 25px 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.story-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #e6e6e6;
+    transition: opacity 0.3s ease;
+}
+
+.story-image:hover {
+    opacity: 0.9;
+}
+
+.story-caption {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #666;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.story-link {
+    display: inline-block;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1493B3;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 15px;
+    transition: color 0.2s ease;
+}
+
+.story-link:hover {
+    color: #32AD7E;
+}
+
+/* ============================================
+   FEATURE QUOTE
+   ============================================ */
+
+.feature-quote {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #C7EDAF 0%, #A1D6F7 100%);
+    padding: 50px;
+    border-left: 4px solid #32AD7E;
+    margin: 20px 0;
+}
+
+.feature-quote blockquote {
+    margin: 0;
+}
+
+.feature-quote p {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    line-height: 1.5;
+    font-weight: 400;
+    color: #121212;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.feature-quote cite {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ============================================
+   SPONSORS SECTION
+   ============================================ */
+
+.sponsors-section {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.sponsors-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 700;
+    color: #121212;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sponsors-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.sponsor-logo {
+    display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.sponsor-logo:hover {
+    transform: translateY(-5px);
+    opacity: 0.8;
+}
+
+.sponsor-logo img {
+    height: auto;
+    width: clamp(150px, 25vw, 250px);
+    max-width: 100%;
+    display: block;
+}
+
+/* ============================================
+   CREDITS SECTION
+   ============================================ */
+
+.credits-section {
+    background-color: #f8f8f8;
+    padding: 60px 20px;
+    border-top: 2px solid #e6e6e6;
+}
+
+.credits-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.credits-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #121212;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.credits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.credits-column p {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.credits-column strong {
+    color: #121212;
+    font-weight: 600;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.site-footer {
+    background-color: #121212;
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content p {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 5px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 900px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .letter-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .letter-image {
+        position: static;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .credits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .countdown-display {
+        gap: 20px;
+    }
+    
+    .sponsors-container {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .top-nav {
+        height: 40px;
+        padding: 0 10px;
+    }
+    
+    .nav-date {
+        font-size: 10px;
+    }
+    
+    .nav-logo {
+        height: 22px;
+    }
+    
+    .nav-social {
+        gap: 8px;
+    }
+    
+    .nav-social a {
+        font-size: 12px;
+    }
+    
+    .masthead {
+        padding: 20px 0 15px;
+    }
+    
+    .masthead-logo img {
+        height: 45px;
+    }
+    
+    .edition-banner {
+        padding: 40px 15px 30px;
+    }
+    
+    .hero-section {
+        margin: 40px auto;
+        padding: 0 10px;
+    }
+    
+    .hero-content {
+        padding: 15px 0;
+    }
+    
+    .countdown-section {
+        padding: 30px 15px;
+        margin: 30px 0;
+    }
+    
+    .countdown-display {
+        gap: 15px;
+    }
+    
+    .countdown-unit {
+        min-width: 60px;
+    }
+    
+    .letter-section {
+        padding: 40px 10px;
+    }
+    
+    .content-grid {
+        margin: 40px auto;
+        padding: 0 10px;
+        gap: 35px;
+    }
+    
+    .story {
+        padding-bottom: 25px;
+    }
+    
+    .sponsors-container {
+        gap: 30px;
+    }
+    
+    .sponsor-logo img {
+        width: clamp(120px, 40vw, 200px);
+    }
+    .feature-quote {
+        padding: 30px 20px;
+    }
+    
+    .credits-section {
+        padding: 40px 15px;
+    }
+}
+
+/* ============================================
+   EXTRA SMALL MOBILE (320px and below)
+   ============================================ */
+
+@media (max-width: 400px) {
+    .top-nav {
+        padding: 0 8px;
+    }
+    
+    .nav-date {
+        font-size: 9px;
+        letter-spacing: 0.3px;
+    }
+    
+    .nav-logo {
+        height: 20px;
+    }
+    
+    .nav-social {
+        gap: 6px;
+    }
+    
+    .nav-social a {
+        font-size: 11px;
+    }
+    
+    .hero-section {
+        padding: 0 8px;
+    }
+    
+    .letter-section {
+        padding: 40px 8px;
+    }
+    
+    .content-grid {
+        padding: 0 8px;
+    }
+    
+    .countdown-section {
+        padding: 25px 10px;
+    }
+    
+    .countdown-unit {
+        min-width: 50px;
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+    .top-nav,
+    .hero-cta,
+    .story-link {
+        display: none;
+    }
+    
+    body {
+        background-color: white;
+    }
+    
+    .story {
+        page-break-inside: avoid;
+    }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.text-center {
+    text-align: center;
+}
+
+.mb-small {
+    margin-bottom: 15px;
+}
+
+.mb-medium {
+    margin-bottom: 30px;
+}
+
+.mb-large {
+    margin-bottom: 50px;
+}
