@@ -278,7 +278,7 @@ body {
 .countdown-section {
     margin: 40px 0;
     padding: 40px 30px;
-    background: linear-gradient(135deg, #A1D6F7 0%, #C7EDAF 100%);
+    background: linear-gradient(0deg,rgba(255, 206, 99, 1) 0%, rgba(210, 35, 42, 1) 100%);
     border-radius: 8px;
     border: 2px solid #1493B3;
 }
@@ -894,4 +894,5 @@ body {
 
 .mb-large {
     margin-bottom: 50px;
+
 }
