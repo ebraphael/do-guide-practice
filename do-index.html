@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syracuse Basketball: In the Paint 2026 | The Daily Orange</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Libre+Franklin:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /* ============================================
+           COLOR SCHEME VARIABLES
+           ============================================ */
+        :root {
+            --primary-red: #D2232A;
+            --primary-orange: #F47920;
+            --accent-yellow: #FFCE63;
+            --light-cream: #FAE3CD;
+            --dark-brown: #38231B;
+        }
+
+        /* ============================================
+           RESET & BASE SETUP
+           ============================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: var(--dark-brown);
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        /* ============================================
+           TOP NAVIGATION
+           ============================================ */
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 40px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #e6e6e6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+            z-index: 1000;
+        }
+
+        .nav-date {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--dark-brown);
+            letter-spacing: 0.5px;
+        }
+
+        .nav-center {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .nav-logo {
+            height: 28px;
+            width: auto;
+        }
+
+        .nav-social {
+            display: flex;
+            gap: 16px;
+        }
+
+        .nav-social a {
+            color: var(--dark-brown);
+            font-size: 14px;
+            transition: color 0.2s ease;
+            text-decoration: none;
+        }
+
+        .nav-social a:hover {
+            color: var(--primary-orange);
+        }
+
+        /* ============================================
+           HERO SECTION
+           ============================================ */
+        .hero-section {
+            margin-top: 40px;
+            padding: 60px 20px;
+            max-width: 1200px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-banner {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto 40px;
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-orange) 100%);
+            border-radius: 8px;
+            border: 4px solid var(--primary-red);
+            padding: 120px 40px;
+            text-align: center;
+        }
+
+        .hero-banner-text {
+            color: white;
+        }
+
+        .hero-banner-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            color: var(--accent-yellow);
+        }
+
+        .hero-banner-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(3rem, 7vw, 5rem);
+            font-weight: 900;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 10px;
+        }
+
+        .hero-banner-subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            margin-top: 15px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-kicker {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--primary-orange);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .hero-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(2rem, 4.5vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--dark-brown);
+            margin-bottom: 20px;
+        }
+
+        .hero-dek {
+            font-size: clamp(1.05rem, 2vw, 1.25rem);
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        .hero-byline {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .byline-text {
+            font-weight: 600;
+            color: var(--dark-brown);
+        }
+
+        /* ============================================
+           COUNTDOWN TIMER
+           ============================================ */
+        .countdown-section {
+            margin: 40px 0;
+            padding: 40px 30px;
+            background: linear-gradient(135deg, var(--dark-brown) 0%, var(--primary-red) 100%);
+            border-radius: 8px;
+            border: 2px solid var(--dark-brown);
+        }
+
+        .countdown-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 700;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .countdown-display {
+            display: flex;
+            justify-content: center;
+            gap: clamp(20px, 4vw, 40px);
+            flex-wrap: wrap;
+        }
+
+        .countdown-unit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 80px;
+        }
+
+        .countdown-number {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 900;
+            color: var(--accent-yellow);
+            line-height: 1;
+            margin-bottom: 8px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .countdown-label {
+            font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary-orange);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 12px 24px;
+            border: 2px solid var(--primary-orange);
+            background-color: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-orange);
+            color: #ffffff;
+        }
+
+        /* ============================================
+           LETTER FROM EDITOR
+           ============================================ */
+        .letter-section {
+            background-color: var(--light-cream);
+            padding: 60px 20px;
+            border-top: 1px solid #e6e6e6;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .letter-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .letter-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--primary-red);
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .letter-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .letter-heading {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-brown);
+            margin-bottom: 10px;
+        }
+
+        .letter-author {
+            font-size: 14px;
+            font-weight: 600;
+            color: #666;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .letter-text p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--dark-brown);
+            margin-bottom: 20px;
+        }
+
+        .letter-signature {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--dark-brown);
+            margin-top: 30px;
+        }
+
+        .letter-image {
+            position: sticky;
+            top: 80px;
+        }
+
+        .letter-image-placeholder {
+            width: 100%;
+            aspect-ratio: 1;
+            background-color: #e6e6e6;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* ============================================
+           CONTENT GRID - SINGLE COLUMN
+           ============================================ */
+        .content-grid {
+            max-width: 900px;
+            width: 100%;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+        }
+
+        /* ============================================
+           FEATURE QUOTE
+           ============================================ */
+        .feature-quote {
+            background: linear-gradient(135deg, var(--primary-orange) 0%, var(--accent-yellow) 100%);
+            padding: 50px;
+            border-left: 4px solid var(--primary-red);
+            border-radius: 8px;
+        }
+
+        .feature-quote p {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            line-height: 1.5;
+            font-weight: 400;
+            color: var(--dark-brown);
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .feature-quote cite {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--dark-brown);
+            font-style: normal;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ============================================
+           STORY CARDS - SINGLE COLUMN LAYOUT
+           ============================================ */
+        .story {
+            border-bottom: 2px solid var(--light-cream);
+            padding-bottom: 40px;
+        }
+
+        .story-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .story-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .story-kicker {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--primary-red);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .story-headline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--dark-brown);
+            margin-bottom: 15px;
+        }
+
+        .story-dek {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .story-byline {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .story-figure {
+            width: 100%;
+        }
+
+        .story-image-placeholder {
+            width: 100%;
+            aspect-ratio: 4/3;
+            background: linear-gradient(135deg, var(--light-cream) 0%, #e6e6e6 100%);
+            border: 2px solid var(--accent-yellow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 14px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+
+        .story-caption {
+            font-size: 13px;
+            line-height: 1.5;
+            color: #666;
+            font-style: italic;
+        }
+
+        .story-link {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary-orange);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 20px;
+            transition: color 0.2s ease;
+        }
+
+        .story-link:hover {
+            color: var(--primary-red);
+        }
+
+        /* ============================================
+           SPONSORS SECTION
+           ============================================ */
+        .sponsors-section {
+            background-color: #ffffff;
+            padding: 60px 20px;
+            border-top: 1px solid #e6e6e6;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .sponsors-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            font-weight: 700;
+            color: var(--dark-brown);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .sponsors-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .sponsor-logo {
+            display: block;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .sponsor-logo:hover {
+            transform: translateY(-5px);
+            opacity: 0.8;
+        }
+
+        .sponsor-logo img {
+            height: auto;
+            width: clamp(150px, 25vw, 250px);
+            max-width: 100%;
+            display: block;
+        }
+
+        .sponsor-logo-apex {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 4px;
+        }
+
+        /* ============================================
+           CREDITS SECTION
+           ============================================ */
+        .credits-section {
+            background-color: var(--light-cream);
+            padding: 60px 20px;
+            border-top: 2px solid var(--primary-orange);
+        }
+
+        .credits-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .credits-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark-brown);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .credits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .credits-column p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--dark-brown);
+            margin-bottom: 10px;
+        }
+
+        .credits-column strong {
+            color: var(--primary-red);
+            font-weight: 600;
+        }
+
+        .copyright {
+            text-align: center;
+            font-size: 13px;
+            color: #666;
+            margin-top: 30px;
+        }
+
+        /* ============================================
+           RESPONSIVE DESIGN
+           ============================================ */
+        @media (max-width: 900px) {
+            .letter-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .letter-image {
+                position: static;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            
+            .credits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .story-content {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-section {
+                padding: 40px 10px;
+            }
+
+            .hero-banner {
+                padding: 80px 20px;
+            }
+
+            .countdown-section {
+                padding: 30px 15px;
+            }
+
+            .feature-quote {
+                padding: 30px 20px;
+            }
+
+            .letter-section {
+                padding: 40px 10px;
+            }
+
+            .content-grid {
+                padding: 0 10px;
+                gap: 40px;
+            }
+
+            .story {
+                padding-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <div class="nav-date">February 18, 2026</div>
+        <div class="nav-center">
+            <a href="https://www.dailyorange.com" target="_blank">
+                <img src="http://dailyorange.s3.amazonaws.com/wp-content/uploads/2023/11/01230943/DO_Anniversary_Logo_IG_black.png" alt="The Daily Orange" class="nav-logo">
+            </a>
+        </div>
+        <div class="nav-social">
+            <a href="https://www.instagram.com/dailyorange" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/thedailyorange" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://x.com/dailyorange" target="_blank" aria-label="X">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <!-- Hero Banner -->
+        <div class="hero-banner">
+            <div class="hero-banner-text">
+                <div class="hero-banner-label">Hero Image Placeholder</div>
+                <div class="hero-banner-title">IN THE PAINT</div>
+                <div class="hero-banner-subtitle">Syracuse Basketball 2026</div>
+            </div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <div class="hero-kicker">2026 Season Preview</div>
+            
+            <h1 class="hero-headline">[Main Headline from Nicholas]</h1>
+            
+            <p class="hero-dek">[Deck/subheadline - main intro paragraph from Nicholas about the season outlook, key storylines, and what makes this season significant]</p>
+            
+            <div class="hero-byline">
+                <span class="byline-text">By The Daily Orange Sports Staff</span>
+                <span>|</span>
+                <span>Feb. 18, 2026</span>
+            </div>
+
+            <!-- Countdown Timer -->
+            <div class="countdown-section">
+                <h2 class="countdown-title">Time Until Tipoff</h2>
+                <div class="countdown-display" id="countdown-display">
+                    <div class="countdown-unit">
+                        <div class="countdown-number" id="days">0</div>
+                        <div class="countdown-label">DAYS</div>
+                    </div>
+                    <div class="countdown-unit">
+                        <div class="countdown-number" id="hours">0</div>
+                        <div class="countdown-label">HOURS</div>
+                    </div>
+                    <div class="countdown-unit">
+                        <div class="countdown-number" id="minutes">0</div>
+                        <div class="countdown-label">MINUTES</div>
+                    </div>
+                    <div class="countdown-unit">
+                        <div class="countdown-number" id="seconds">0</div>
+                        <div class="countdown-label">SECONDS</div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#editor-letter" class="cta-button">
+                Continue Reading <i class="fas fa-arrow-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Letter from Editor -->
+    <section id="editor-letter" class="letter-section">
+        <div class="letter-container">
+            <div class="letter-label">A Letter from the Editor</div>
+            <div class="letter-content">
+                <div class="letter-text">
+                    <h3 class="letter-heading">In the Paint</h3>
+                    <p class="letter-author">Nicholas Alumkal, Sports Editor</p>
+                    <p>[Opening paragraph from Nicholas about the state of Syracuse basketball]</p>
+                    <p>[Second paragraph about key storylines, players, or themes]</p>
+                    <p>[Third paragraph about what readers can expect from this guide]</p>
+                    <p>[Closing paragraph]</p>
+                    <p class="letter-signature">— Thanks for reading,</p>
+                    <p class="letter-signature">Nicholas Alumkal | Sports Editor</p>
+                    <br>
+                    <a href="#stories" class="cta-button">
+                        Continue Reading <i class="fas fa-arrow-down"></i>
+                    </a>
+                </div>
+                <div class="letter-image">
+                    <div class="letter-image-placeholder">Editor Photo</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Grid -->
+    <!-- Guide format: 5 stories total — 4 primary stories + 1 beat writer prediction (last) -->
+    <main id="stories" class="content-grid">
+        
+        <!-- Feature Quote 1 -->
+        <aside class="feature-quote">
+            <blockquote>
+                <p>"[Impactful quote from key player or coach from Nicholas]"</p>
+                <cite>— [Player/Coach Name], [Position/Title]</cite>
+            </blockquote>
+        </aside>
+
+        <!-- Story 1 -->
+        <article class="story">
+            <div class="story-content">
+                <div class="story-text">
+                    <div class="story-kicker">[Kicker - e.g., "Player Profile"]</div>
+                    <h3 class="story-headline">[HEADLINE FROM NICHOLAS]</h3>
+                    <p class="story-dek">[Story blurb/introduction - brief summary from Nicholas]</p>
+                    <div class="story-byline">By: [Author Name] | [Title]</div>
+                    <a href="#" class="story-link">Read More →</a>
+                </div>
+                <figure class="story-figure">
+                    <div class="story-image-placeholder">Story Image 1</div>
+                    <figcaption class="story-caption">[Photo caption]</figcaption>
+                </figure>
+            </div>
+        </article>
+
+        <!-- Story 2 -->
+        <article class="story">
+            <div class="story-content">
+                <div class="story-text">
+                    <div class="story-kicker">[Kicker]</div>
+                    <h3 class="story-headline">[HEADLINE 2]</h3>
+                    <p class="story-dek">[Story blurb 2]</p>
+                    <div class="story-byline">By: [Author Name] | [Title]</div>
+                    <a href="#" class="story-link">Read More →</a>
+                </div>
+                <figure class="story-figure">
+                    <div class="story-image-placeholder">Story Image 2</div>
+                    <figcaption class="story-caption">[Photo caption]</figcaption>
+                </figure>
+            </div>
+        </article>
+
+        <!-- Story 3 -->
+        <article class="story">
+            <div class="story-content">
+                <div class="story-text">
+                    <div class="story-kicker">[Kicker]</div>
+                    <h3 class="story-headline">[HEADLINE 3]</h3>
+                    <p class="story-dek">[Story blurb 3]</p>
+                    <div class="story-byline">By: [Author Name] | [Title]</div>
+                    <a href="#" class="story-link">Read More →</a>
+                </div>
+                <figure class="story-figure">
+                    <div class="story-image-placeholder">Story Image 3</div>
+                    <figcaption class="story-caption">[Photo caption]</figcaption>
+                </figure>
+            </div>
+        </article>
+
+        <!-- Story 4 -->
+        <article class="story">
+            <div class="story-content">
+                <div class="story-text">
+                    <div class="story-kicker">[Kicker]</div>
+                    <h3 class="story-headline">[HEADLINE 4]</h3>
+                    <p class="story-dek">[Story blurb 4]</p>
+                    <div class="story-byline">By: [Author Name] | [Title]</div>
+                    <a href="#" class="story-link">Read More →</a>
+                </div>
+                <figure class="story-figure">
+                    <div class="story-image-placeholder">Story Image 4</div>
+                    <figcaption class="story-caption">[Photo caption]</figcaption>
+                </figure>
+            </div>
+        </article>
+
+        <!-- Feature Quote 2 -->
+        <aside class="feature-quote">
+            <blockquote>
+                <p>"[Second impactful quote from Nicholas]"</p>
+                <cite>— [Player/Coach Name], [Position/Title]</cite>
+            </blockquote>
+        </aside>
+
+        <!-- Story 5: Beat Writer Prediction (goes last) -->
+        <article class="story story-beat-prediction">
+            <div class="story-content">
+                <div class="story-text">
+                    <div class="story-kicker">Beat Writer Prediction</div>
+                    <h3 class="story-headline">[BEAT WRITER PREDICTION HEADLINE]</h3>
+                    <p class="story-dek">[Beat writer prediction blurb - season outlook and predictions from the beat writers]</p>
+                    <div class="story-byline">By: Daily Orange Sports Staff</div>
+                    <a href="#" class="story-link">Read More →</a>
+                </div>
+                <figure class="story-figure">
+                    <div class="story-image-placeholder">Beat Writer Prediction Image</div>
+                    <figcaption class="story-caption">[Photo caption]</figcaption>
+                </figure>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Sponsors Section -->
+    <section class="sponsors-section">
+        <h3 class="sponsors-title">Thank You To Our Sponsors</h3>
+        <div class="sponsors-container">
+            <a class="sponsor-logo sponsor-logo-apex" href="https://www.apexentertainment.com/syracuse/" target="_blank">
+                <img src="assets/ApexSYC_Vertical_Color_Logo-01-1.png" alt="Apex Entertainment">
+            </a>
+            <a class="sponsor-logo" href="https://skytopliquors.com/" target="_blank">
+                <img src="assets/skytop-logo.png" alt="Skytop Liquors">
+            </a>
+        </div>
+    </section>
+
+    <!-- Credits Section -->
+    <section class="credits-section">
+        <div class="credits-container">
+            <h3 class="credits-title">Credits</h3>
+            <div class="credits-grid">
+                <div class="credits-column">
+                    <p><strong>Sports Editor:</strong> Nicholas Alumkal</p>
+                    <p><strong>Editor-in-Chief:</strong> Kendall Luther</p>
+                    <p><strong>Managing Editor:</strong> Rosina Boehm</p>
+                </div>
+                <div class="credits-column">
+                    <p><strong>Digital Managing Editor:</strong> Griffin Uribe Brown</p>
+                    <p><strong>Social Media Editor:</strong> Charlotte Price</p>
+                    <p><strong>IT Manager:</strong> Davis Hood</p>
+                </div>
+                <div class="credits-column">
+                    <p><strong>Assistant Sports Editors:</strong> Jordan Kimball, Mauricio Palmar, Harris Pemberton</p>
+                    <p><strong>Assistant Digital Editors:</strong> Spencer Brod, Jason Glick</p>
+                </div>
+                <div class="credits-column">
+                    <p><strong>Presentation Director:</strong> Ilana Zahavy</p>
+                    <p><strong>Digital Design Directors:</strong> Sophia Burke, Katie Crews</p>
+                    <p><strong>Photo Editor:</strong> Avery Magee</p>
+                </div>
+            </div>
+            <p class="copyright">© 2026 The Daily Orange. All rights reserved.</p>
+        </div>
+    </section>
+
+    <!-- JavaScript for Countdown Timer -->
+    <script>
+        function updateCountdown() {
+            // Tipoff: February 18, 2026 at 7:00 PM EST
+            const gameDate = new Date('2026-02-18T19:00:00-05:00');
+            const now = new Date();
+            
+            // Calculate difference in milliseconds
+            const difference = gameDate - now;
+            
+            if (difference <= 0) {
+                // Game has started or is over
+                document.getElementById('countdown-display').innerHTML = '<div class="countdown-number" style="font-size: clamp(2.5em, 6vw, 4em);">It\'s Game Time!</div>';
+                return;
+            }
+            
+            // Calculate time units
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+            
+            // Update the display
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+        }
+        
+        // Update countdown on page load
+        updateCountdown();
+        
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+    </script>
+
+</body>
+</html>
