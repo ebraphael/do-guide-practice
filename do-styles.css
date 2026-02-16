@@ -1,7 +1,3 @@
-/* ============================================
-   FONT IMPORTS & BASE SETUP
-   ============================================ */
-
 @font-face {
     font-family: 'bentonsansregular';
     src: url('bentonsans-regular-webfont.woff2') format('woff2'),
@@ -26,7 +22,7 @@ body {
     font-family: 'Libre Franklin', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     line-height: 1.7;
     color: #121212;
-    background-color: #FAE3CD;
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -88,7 +84,7 @@ body {
 }
 
 .nav-social a:hover {
-    color: #D2232A;
+    color: #1493B3;
 }
 
 /* ============================================
@@ -192,23 +188,13 @@ body {
 }
 
 .hero-kicker {
-    align-items: center;
     font-family: 'Libre Franklin', sans-serif;
     font-size: 13px;
     font-weight: 700;
-    color: #FAE3CD;
-    background: #D2232A;
-    background: radial-gradient(circle, rgba(210, 35, 42, 1) 0%, rgba(255, 206, 99, 1) 100%);
+    color: #1493B3;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     margin-bottom: 15px;
-    text-align: center;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    width: 100vw;
 }
 
 .hero-headline {
@@ -288,9 +274,9 @@ body {
 .countdown-section {
     margin: 40px 0;
     padding: 40px 30px;
-    background: linear-gradient(0deg,rgba(255, 206, 99, 1) 0%, rgba(210, 35, 42, 1) 100%);
+    background: linear-gradient(135deg, #A1D6F7 0%, #C7EDAF 100%);
     border-radius: 8px;
-    border: 2px solid #38231B;
+    border: 2px solid #1493B3;
 }
 
 .countdown-container {
@@ -301,7 +287,7 @@ body {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: 700;
-    color: #FAE3CD;
+    color: #121212;
     margin-bottom: 30px;
     letter-spacing: -0.5px;
 }
@@ -324,7 +310,7 @@ body {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 900;
-    color: #38231B;
+    color: #1493B3;
     line-height: 1;
     margin-bottom: 8px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -360,7 +346,7 @@ body {
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 2px;
-    color: #D2232A;
+    color: #32AD7E;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 30px;
@@ -458,7 +444,7 @@ body {
     font-family: 'Libre Franklin', sans-serif;
     font-size: 12px;
     font-weight: 700;
-    color: #D2232A;
+    color: #1493B3;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     margin-bottom: 12px;
@@ -543,7 +529,7 @@ body {
     font-family: 'Libre Franklin', sans-serif;
     font-size: 14px;
     font-weight: 600;
-    color: #D2232A;
+    color: #1493B3;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -552,7 +538,7 @@ body {
 }
 
 .story-link:hover {
-    color: #F47920;
+    color: #32AD7E;
 }
 
 /* ============================================
@@ -643,9 +629,9 @@ body {
    ============================================ */
 
 .credits-section {
-    background-color: #38231B;
+    background-color: #f8f8f8;
     padding: 60px 20px;
-    border-top: 2px solid #FAE3CD;
+    border-top: 2px solid #e6e6e6;
 }
 
 .credits-container {
@@ -657,7 +643,7 @@ body {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 2rem;
     font-weight: 700;
-    color: #FAE3CD;
+    color: #121212;
     text-align: center;
     margin-bottom: 40px;
 }
@@ -672,12 +658,12 @@ body {
     font-family: 'Libre Franklin', sans-serif;
     font-size: 14px;
     line-height: 1.8;
-    color: #FAE3CD;
+    color: #333;
     margin-bottom: 10px;
 }
 
 .credits-column strong {
-    color: #FAE3CD;
+    color: #121212;
     font-weight: 600;
 }
 
@@ -686,8 +672,8 @@ body {
    ============================================ */
 
 .site-footer {
-    background-color: #38231B;
-    color: #FAE3CD;
+    background-color: #121212;
+    color: #ffffff;
     padding: 40px 20px;
     text-align: center;
 }
@@ -904,5 +890,4 @@ body {
 
 .mb-large {
     margin-bottom: 50px;
-
 }
