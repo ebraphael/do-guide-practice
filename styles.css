@@ -280,7 +280,7 @@ body {
     padding: 40px 30px;
     background: linear-gradient(0deg,rgba(255, 206, 99, 1) 0%, rgba(210, 35, 42, 1) 100%);
     border-radius: 8px;
-    border: 2px solid #1493B3;
+    border: 2px solid #38231B;
 }
 
 .countdown-container {
@@ -291,7 +291,7 @@ body {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: 700;
-    color: #121212;
+    color: #FAE3CD;
     margin-bottom: 30px;
     letter-spacing: -0.5px;
 }
@@ -314,7 +314,7 @@ body {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 900;
-    color: #1493B3;
+    color: #38231B;
     line-height: 1;
     margin-bottom: 8px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -896,4 +896,5 @@ body {
     margin-bottom: 50px;
 
 }
+
 
