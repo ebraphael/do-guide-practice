@@ -1057,6 +1057,7 @@
                     </div>
                 </section>
         <!-- Main Content Grid -->
+            <!-- Guide format: 5 stories total — 4 primary stories + 1 beat writer prediction (last) -->
             <div class="content-grid" id="stories">
                 
                 <!-- Feature Block Quote -->
@@ -1136,62 +1137,22 @@
                     </blockquote>
                 </aside>
 
-                <!-- A5 -->
-                <article class="story">
-                    <div class="story-kicker">Men's Lacrosse</div>
-                    <h3 class="story-headline-secondary">'SILENT KILLER'</h3>
-                    <p class="story-dek">There's only 1 way for Riley Figueiras to live up to Syracuse's No. 11 legacy</p>
-                    <div class="story-byline">
-                        <span>By: Mauricio Palmar | Asst. Sports Editor</span>
-                    </div>
-                    <figure class="story-figure">
-                        <img src="https://dailyorange.s3.amazonaws.com/wp-content/uploads/2026/01/28221711/11-Riley-Figueiras-23-scaled.jpg" alt="Riley Figueiras" class="story-image">
-                        <figcaption class="story-caption">Historically, the No. 11 has belonged to some of Syracuse's best defenders. Nine players have donned it over the past two decades, and seven of them were All-Americans. In his fourth year with the number, a national championship is the only way for Riley Figueiras to live up to that legacy.</figcaption>
-                    </figure>
-                    <a href="https://dailyorange.com/2026/01/riley-figueiras-syracuse-no-11-legacy/" class="story-link" target="_blank">Read More →</a>
-                </article>
-
-                <!-- A6 -->
-                <article class="story">
-                    <div class="story-kicker">Women's Lacrosse</div>
-                    <h3 class="story-headline-secondary">'BIG DOG'</h3>
-                    <p class="story-dek">Mackenzie Borbi furthers South Jersey's esteemed draw specialist pipeline</p>
-                    <div class="story-byline">
-                        <span>By: Jason Glick | Asst. Digital Editor</span>
-                    </div>
-                    <figure class="story-figure">
-                        <img src="https://dailyorange.s3.amazonaws.com/wp-content/uploads/2026/01/28213214/LGA6_EMBED_45-Mackenzie-Borbi-10-scaled-e1769653974378.jpg" alt="Mackenzie Borbi" class="story-image">
-                        <figcaption class="story-caption">Over the past several years, southern New Jersey has produced a strong lineage of draw control specialists, with players like McKenzie Blake and Delaney Jackson hailing from the region. As Syracuse's top recruit in the class of 2025, Mackenzie Borbi is hoping to continue that lineage.</figcaption>
-                    </figure>
-                    <a href="https://dailyorange.com/2026/01/syracuse-womens-lacrosse-mackenzie-borbi-draw-control-specialist/" class="story-link" target="_blank">Read More →</a>
-                </article>
-
-                <!-- A7 -->
-                <article class="story">
-                    <div class="story-kicker">Men's Lacrosse</div>
+                <!-- Story 5: Beat Writer Prediction (goes last) -->
+                <article class="story story-beat-prediction">
+                    <div class="story-kicker">Beat Writer Prediction</div>
                     <h3 class="story-headline-secondary">Beat writers' predictions</h3>
+                    <p class="story-dek">Men's and women's lacrosse beat writers share their season outlook and predictions for both Orange programs.</p>
                     <div class="story-byline">
                         <span>By: Daily Orange Sports Staff</span>
                     </div>
                     <figure class="story-figure">
-                        <img src="https://dailyorange.s3.amazonaws.com/wp-content/uploads/2026/01/28225157/LGA7_h2_JacobHalsema_SP_MLAX%40Princeton_January-28-2020_0018-scaled.jpg" alt="Syracuse Men's Lacrosse players grouped on the field" class="story-image">
-                        <figcaption class="story-caption">Syracuse men's lacrosse came two games shy of claiming the national championship 2025, snapping a 12-year Final Four drought but falling hard to Maryland in the semifinal. Now, after a near taste of glory, the Orange enter 2026 with a single mandate — championship or bust. Ranked No. 3 nationally behind Maryland and Princeton, Syracuse faces a brutal schedule and even heavier pressure to finish the job.</figcaption>
+                        <img src="https://dailyorange.s3.amazonaws.com/wp-content/uploads/2026/01/28225157/LGA7_h2_JacobHalsema_SP_MLAX%40Princeton_January-28-2020_0018-scaled.jpg" alt="Syracuse Lacrosse players grouped on the field" class="story-image">
+                        <figcaption class="story-caption">Syracuse men's lacrosse came two games shy of claiming the national championship in 2025, snapping a 12-year Final Four drought. The women's program enters a new era under head coach Regy Thorpe. The beat writers weigh in on what to expect from both teams in 2026.</figcaption>
                     </figure>
-                    <a href="https://dailyorange.com/2026/01/syracuse-mens-lacrosse-season-beat-writers-predictions/" class="story-link" target="_blank">Read More →</a>
-                </article>
-
-                <!-- A8 -->
-                <article class="story">
-                    <div class="story-kicker">Women's Lacrosse</div>
-                    <h3 class="story-headline-secondary">Beat writers' predictions</h3>
-                    <div class="story-byline">
-                        <span>By: Daily Orange Sports Staff</span>
+                    <div style="display: flex; flex-wrap: wrap; gap: 15px;">
+                        <a href="https://dailyorange.com/2026/01/syracuse-mens-lacrosse-season-beat-writers-predictions/" class="story-link" target="_blank">Men's Predictions →</a>
+                        <a href="https://dailyorange.com/2026/01/syracuse-womens-lacrosse-beat-writers-predict-regy-thorpe-first-year/" class="story-link" target="_blank">Women's Predictions →</a>
                     </div>
-                    <figure class="story-figure">
-                        <img src="https://dailyorange.s3.amazonaws.com/wp-content/uploads/2026/01/28213432/LGA8_LeonardoEriman_AVE_WLAXvsUVAFullGame_03292025-069-e1769654390172.jpg" alt="Syracuse Women's Lacrosse players grouped on the field" class="story-image">
-                        <figcaption class="story-caption">After a program-record nine losses and a second-round NCAA Tournament exit, Syracuse women's lacrosse entered the 2026 offseason amid sweeping change. Head coach Kayla Treanor departed for Penn State, key contributors left via graduation and the portal and the program was forced to reset quickly. With new head coach Regy Thorpe in place, the standard hasn't budged — Championship Weekend remains the goal.</figcaption>
-                    </figure>
-                    <a href="https://dailyorange.com/2026/01/syracuse-womens-lacrosse-beat-writers-predict-regy-thorpe-first-year/" class="story-link" target="_blank">Read More →</a>
                 </article>
 
 
