@@ -88,7 +88,7 @@ body {
 }
 
 .nav-social a:hover {
-    color: #1493B3;
+    color: #D2232A;
 }
 
 /* ============================================
@@ -192,13 +192,23 @@ body {
 }
 
 .hero-kicker {
+    align-items: center;
     font-family: 'Libre Franklin', sans-serif;
     font-size: 13px;
     font-weight: 700;
-    color: #1493B3;
+    color: #FAE3CD;
+    background: #D2232A;
+    background: radial-gradient(circle, rgba(210, 35, 42, 1) 0%, rgba(255, 206, 99, 1) 100%);
     letter-spacing: 1.5px;
     text-transform: uppercase;
     margin-bottom: 15px;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
 }
 
 .hero-headline {
@@ -350,7 +360,7 @@ body {
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 2px;
-    color: #32AD7E;
+    color: #D2232A;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 30px;
@@ -448,7 +458,7 @@ body {
     font-family: 'Libre Franklin', sans-serif;
     font-size: 12px;
     font-weight: 700;
-    color: #1493B3;
+    color: #D2232A;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     margin-bottom: 12px;
@@ -533,7 +543,7 @@ body {
     font-family: 'Libre Franklin', sans-serif;
     font-size: 14px;
     font-weight: 600;
-    color: #1493B3;
+    color: #D2232A;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -542,7 +552,7 @@ body {
 }
 
 .story-link:hover {
-    color: #32AD7E;
+    color: #F47920;
 }
 
 /* ============================================
@@ -633,9 +643,9 @@ body {
    ============================================ */
 
 .credits-section {
-    background-color: #f8f8f8;
+    background-color: #38231B;
     padding: 60px 20px;
-    border-top: 2px solid #e6e6e6;
+    border-top: 2px solid #FAE3CD;
 }
 
 .credits-container {
@@ -647,7 +657,7 @@ body {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 2rem;
     font-weight: 700;
-    color: #121212;
+    color: #FAE3CD;
     text-align: center;
     margin-bottom: 40px;
 }
@@ -662,12 +672,12 @@ body {
     font-family: 'Libre Franklin', sans-serif;
     font-size: 14px;
     line-height: 1.8;
-    color: #333;
+    color: #FAE3CD;
     margin-bottom: 10px;
 }
 
 .credits-column strong {
-    color: #121212;
+    color: #FAE3CD;
     font-weight: 600;
 }
 
@@ -676,8 +686,8 @@ body {
    ============================================ */
 
 .site-footer {
-    background-color: #121212;
-    color: #ffffff;
+    background-color: #38231B;
+    color: #FAE3CD;
     padding: 40px 20px;
     text-align: center;
 }
@@ -896,5 +906,3 @@ body {
     margin-bottom: 50px;
 
 }
-
-
