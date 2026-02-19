@@ -5,48 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>In the Paint 2026: Syracuse Basketball vs. UNC | The Daily Orange</title>
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Link -->
+    <link rel="stylesheet" href="https://dailyorange.com/wp-content/special/ostrom-guides/Benton/stylesheet.css"/>
     
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Local -->
+    <link rel="stylesheet" href="'/Users/elizaraphael/Desktop/Daily Orange/stylesheet.css'">
     
     <style>
         /* ============================================
            COLOR SCHEME VARIABLES
            ============================================ */
         
-         /* ============================================
-       BENTON SANS FONT FILES
-       ============================================ */
-    
+        /* ============================================
+            bentonsansregular FONT FILES
+           ============================================ */
+        /*
         @font-face {
-            font-family: 'Benton Sans';
-            src: url('fonts/bentonsans-regular-webfont.woff2') format('woff2'),
-                 url('fonts/bentonsans-regular-webfont.woff') format('woff');
-            font-weight: 400;
+            font-family: 'bentonsansbook_italic';
+            src: url('bentonsans-bookitalic-webfont.woff2') format('woff2'),
+                url('bentonsans-bookitalic-webfont.woff') format('woff');
+            font-weight: normal;
             font-style: normal;
-            font-display: swap;
+
         }
-        
+
         @font-face {
-            font-family: 'Benton Sans';
-            src: url('fonts/bentonsans-semibold-webfont.woff2') format('woff2'),
-                 url('fonts/bentonsans-semibold-webfont.woff') format('woff');
-            font-weight: 600;
+            font-family: 'bentonsanslight';
+            src: url('bentonsans-light-webfont.woff2') format('woff2'),
+                url('bentonsans-light-webfont.woff') format('woff');
+            font-weight: normal;
             font-style: normal;
-            font-display: swap;
+
         }
-        
+
         @font-face {
-            font-family: 'Benton Sans';
-            src: url('fonts/bentonsans-bold-webfont.woff2') format('woff2'),
-                 url('fonts/bentonsans-bold-webfont.woff') format('woff');
-            font-weight: 700;
+            font-family: 'bentonsanslight_italic';
+            src: url('bentonsans-lightitalic-webfont.woff2') format('woff2'),
+                url('bentonsans-lightitalic-webfont.woff') format('woff');
+            font-weight: normal;
             font-style: normal;
-            font-display: swap;
+
         }
-        
+
+        @font-face {
+            font-family: 'bentonsansmedium';
+            src: url('bentonsans-medium-webfont.woff2') format('woff2'),
+                url('bentonsans-medium-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+
+        }
+
+        @font-face {
+            font-family: 'bentonsansregular';
+            src: url('bentonsans-regular-webfont.woff2') format('woff2'),
+                url('bentonsans-regular-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+
+        }
+        */
         :root {
             --primary-red: #D2232A;
             --primary-orange: #F47920;
@@ -71,7 +89,7 @@
         }
 
         body {
-            font-family: 'Benton Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: 'bentonsansregular', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             line-height: 1.7;
             color: var(--dark-brown);
             background-color: #ffffff;
@@ -170,7 +188,7 @@
         }
 
         .hero-banner-title {
-            font-family: 'Playfair Display', Georgia, serif;
+            font-family: 'bentonsansregular', Georgia, serif;
             font-size: clamp(3rem, 7vw, 5rem);
             font-weight: 900;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -197,7 +215,7 @@
         }
 
         .hero-headline {
-            font-family: 'Playfair Display', Georgia, serif;
+            font-family: 'bentonsansregular', Georgia, serif;
             font-size: clamp(2rem, 4.5vw, 3.5rem);
             font-weight: 700;
             line-height: 1.2;
@@ -241,7 +259,7 @@
         }
 
         .countdown-title {
-            font-family: 'Playfair Display', Georgia, serif;
+            font-family: 'bentonsansregular', Georgia, serif;
             font-size: clamp(1.5rem, 3vw, 2rem);
             font-weight: 700;
             color: #ffffff;
@@ -264,7 +282,7 @@
         }
 
         .countdown-number {
-            font-family: 'Playfair Display', Georgia, serif;
+            font-family: 'bentonsansregular', Georgia, serif;
             font-size: clamp(2.5rem, 6vw, 4rem);
             font-weight: 900;
             color: var(--accent-yellow);
@@ -335,7 +353,7 @@
         }
 
         .letter-heading {
-            font-family: 'Playfair Display', Georgia, serif;
+            font-family: 'bentonsansregular', Georgia, serif;
             font-size: 2.5rem;
             font-weight: 700;
             color: var(--dark-brown);
@@ -359,7 +377,7 @@
         }
 
         .letter-signature {
-            font-family: 'Playfair Display', Georgia, serif;
+            font-family: 'bentonsansregular', Georgia, serif;
             font-size: 1.2rem;
             font-style: italic;
             color: var(--dark-brown);
@@ -369,13 +387,13 @@
         .letter-image {
             position: sticky;
             top: 80px;
+            border: 1px solid #38231B;
         }
 
         .letter-image-placeholder {
             width: 100%;
             aspect-ratio: 1;
             background-color: #e6e6e6;
-            border: 1px solid #ccc;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -407,7 +425,7 @@
         }
 
         .feature-quote p {
-            font-family: 'Playfair Display', Georgia, serif;
+            font-family: 'bentonsansregular', Georgia, serif;
             font-size: clamp(1.5rem, 3vw, 2rem);
             line-height: 1.5;
             font-weight: 400;
@@ -455,7 +473,7 @@
         }
 
         .story-headline {
-            font-family: 'Playfair Display', Georgia, serif;
+            font-family: 'bentonsansregular', Georgia, serif;
             font-size: clamp(1.8rem, 3vw, 2.5rem);
             font-weight: 700;
             line-height: 1.2;
@@ -528,7 +546,7 @@
         }
 
         .sponsors-title {
-            font-family: 'Playfair Display', Georgia, serif;
+            font-family: 'bentonsansregular', Georgia, serif;
             font-size: clamp(1.8rem, 3vw, 2.5rem);
             font-weight: 700;
             color: var(--dark-brown);
@@ -584,7 +602,7 @@
         }
 
         .credits-title {
-            font-family: 'Playfair Display', Georgia, serif;
+            font-family: 'bentonsansregular', Georgia, serif;
             font-size: 2rem;
             font-weight: 700;
             color: var(--dark-brown);
@@ -698,33 +716,70 @@
             </a>
         </div>
     </nav>
+    
+    <!-- Primary Graphic -->
+    <div style="width: 40%; max-width: 900px; margin: 0 auto; padding: 60px 10px 50px 10px;">
+    <img 
+        src="https://dailyorange.s3.amazonaws.com/wp-content/uploads/2026/02/18194446/PRINT-BANNER_WEB-02rev.png" 
+        alt="Description of image"
+        style="width: 100%; height: auto; display: block;"
+    />
+    </div>
 
-    <!-- Hero Section -->
+    <!--
     <section class="hero-section">
-        <!-- Hero Banner -->
         <div class="hero-banner">
             <div class="hero-banner-text">
-                <div class="hero-banner-label">Hero Image Placeholder</div>
                 <div class="hero-banner-title">IN THE PAINT</div>
                 <div class="hero-banner-subtitle">Syracuse Basketball vs. UNC</div>
             </div>
         </div>
 
-        <!-- Hero Content -->
-        <div class="hero-content">
-            <div class="hero-kicker">2026 Season Preview</div>
-            
-            <h1 class="hero-headline">[Main Headline from Nicholas]</h1>
-            
-            <p class="hero-dek">[Deck/subheadline - main intro paragraph from Nicholas about the season outlook, key storylines, and what makes this season significant]</p>
-            
-            <div class="hero-byline">
-                <span class="byline-text">By The Daily Orange Sports Staff</span>
-                <span>|</span>
-                <span>Feb. 19, 2026</span>
-            </div>
+            <a href="#editor-letter" class="cta-button">
+                Continue Reading <i class="fas fa-arrow-down"></i>
+            </a>
+        </div>
+    </section>
+    -->
 
-            <!-- Countdown Timer -->
+    <!-- Letter from Editor -->
+    <section id="editor-letter" class="letter-section">
+        <div class="letter-container">
+            <div class="letter-label">A Letter from the Editor</div>
+            <div class="letter-content">
+                <div class="letter-text">
+                    <h3 class="letter-heading">In the Paint</h3>
+                    <p class="letter-author">Nicholas Alumkal, Sports Editor</p>
+                    <p>Dear readers,</p>
+                    <p>In his third season at the helm, Syracuse men’s basketball head coach Adrian Autry is on the hot seat. The Orange have dropped from the heights they consistently reached during former head coach Jim Boeheim’s 47-year tenure. SU is on course to miss the NCAA Tournament for the fifth consecutive year — something it hasn’t done since between 1967-72.</p>
+                    <p>When the Orange host No. 16 North Carolina Saturday, it’ll serve as a reminder of the standard they no longer live up to. A standard set by Jim Lee and Rudy Hackett, who guided SU to its first Final Four in 1975 and will have their numbers retired in the JMA Wireless Dome Saturday. A standard that Autry showed signs of fulfilling when he upsetted then-No. 7 North Carolina 86-79 on Feb. 13, 2024, in his first season. Since then, it’s been a slow slide. The Tar Heels’ head coach Hubert Davis is familiar with inheriting high expectations following three-time national champion head coach Roy Williams and has been under his own scrutiny.</p>
+                    <p>The Orange’s current outlook is grim. They’re nostalgic for halcyon days of success.</p>
+                    <p>The Daily Orange has everything you need to know before Syracuse’s ACC clash with UNC.</p>
+                    <p class="letter-signature">— Thanks for reading,</p>
+                    <p class="letter-signature">Nicholas Alumkal | Sports Editor</p>
+                    <br>
+                    <a href="#stories" class="cta-button">
+                        Continue Reading <i class="fas fa-arrow-down"></i>
+                    </a>
+                </div>
+                <div class="letter-image">
+                    <div style="width: 100%; aspect-ratio: 1; overflow: hidden; border: 1px solid #ccc;">
+                        <img 
+                        src="https://dailyorange.s3.amazonaws.com/wp-content/uploads/2026/01/29010142/NicholasAlumkal_Headshot-scaled.jpg" 
+                        alt="Nicholas Alumkal, Sports Editor"
+                        style="width: 100%; height: 100%; object-fit: cover; display: block;"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Grid -->
+    <!-- Guide format: 5 stories total — 4 primary stories + 1 beat writer prediction (last) -->
+    <main id="stories" class="content-grid">
+        
+       <!-- Countdown Timer -->
             <div class="countdown-section">
                 <h2 class="countdown-title">Time Until Tipoff</h2>
                 <div class="countdown-display" id="countdown-display">
@@ -747,64 +802,25 @@
                 </div>
             </div>
 
-            <a href="#editor-letter" class="cta-button">
-                Continue Reading <i class="fas fa-arrow-down"></i>
-            </a>
-        </div>
-    </section>
-
-    <!-- Letter from Editor -->
-    <section id="editor-letter" class="letter-section">
-        <div class="letter-container">
-            <div class="letter-label">A Letter from the Editor</div>
-            <div class="letter-content">
-                <div class="letter-text">
-                    <h3 class="letter-heading">In the Paint</h3>
-                    <p class="letter-author">Nicholas Alumkal, Sports Editor</p>
-                    <p>[Opening paragraph from Nicholas about the state of Syracuse basketball]</p>
-                    <p>[Second paragraph about key storylines, players, or themes]</p>
-                    <p>[Third paragraph about what readers can expect from this guide]</p>
-                    <p>[Closing paragraph]</p>
-                    <p class="letter-signature">— Thanks for reading,</p>
-                    <p class="letter-signature">Nicholas Alumkal | Sports Editor</p>
-                    <br>
-                    <a href="#stories" class="cta-button">
-                        Continue Reading <i class="fas fa-arrow-down"></i>
-                    </a>
-                </div>
-                <div class="letter-image">
-                    <div class="letter-image-placeholder">Editor Photo</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Main Content Grid -->
-    <!-- Guide format: 5 stories total — 4 primary stories + 1 beat writer prediction (last) -->
-    <main id="stories" class="content-grid">
-        
-        <!-- Feature Quote 1 -->
-        <aside class="feature-quote">
-            <blockquote>
-                <p>"[Impactful quote from key player or coach from Nicholas]"</p>
-                <cite>— [Player/Coach Name], [Position/Title]</cite>
-            </blockquote>
-        </aside>
-
         <!-- Story 1 -->
         <article class="story">
             <div class="story-content">
                 <div class="story-text">
                     <div class="story-kicker">Men’s Basketball</div>
                     <h3 class="story-headline">LONG-TIME COMING</h3>
-                    <p class="story-dek">Jim Lee and Rudy Hackett reset SU’s standard. They’ll be honored together.</p>
+                    <p class="story-dek">Jim Lee and Rudy Hackett guided Syracuse to its first Final Four in 1975. Now, their jerseys will be retired together in the JMA Wireless Dome Saturday.</p>
                     <div class="story-byline">By: Aiden Stepansky | Senior Staff Writer</div>
                     <a href="#" class="story-link">Read More →</a>
                 </div>
                 <figure class="story-figure">
-                    <div class="story-image-placeholder">Story Image 1</div>
-                    <figcaption class="story-caption">Guard Jim Lee and forward Rudy Hackett led Syracuse to its first-ever Final Four appearance in 1975. Their jerseys will be retired on Saturday, etching their names in SU history together forever.
-                    </figcaption>
+                    <div style="width: 100%; aspect-ratio: 4/3; overflow: hidden; border-radius: 4px; border: 2px solid var(--dark-brown);">
+                        <img 
+                        src="https://dailyorange.s3.amazonaws.com/wp-content/uploads/2026/02/18202600/A2-COLLAGE-1-e1771464736532.png" 
+                        alt="Jim Lee and Rudy Hackett Collage"
+                        style="width: 100%; height: 100%; object-fit: cover; display: block;"
+                        />
+                    </div>
+                    <figcaption class="story-caption">On Saturday, Syracuse men's basketball legends Jim Lee and Rudy Hackett's jerseys will be retired together. The duo was an instrumental part of SU's first Final Four team in 1975.</figcaption>
                 </figure>
             </div>
         </article>
@@ -815,13 +831,19 @@
                 <div class="story-text">
                     <div class="story-kicker">Men’s Basketball</div>
                     <h3 class="story-headline">SLOW SLIDE</h3>
-                    <p class="story-dek">30 program-defining moments since Autry, Syracuse’s 2024 UNC upset</p>
+                    <p class="story-dek">Since defeating then-No. 7 North Carolina on Feb. 13, 2024, Syracuse men’s basketball has largely faltered. Here’s what’s happened since that upset.</p>
                     <div class="story-byline">By: Justin Girshon | Senior Staff Writer</div>
                     <a href="#" class="story-link">Read More →</a>
                 </div>
                 <figure class="story-figure">
-                    <div class="story-image-placeholder">Story Image 2</div>
-                    <figcaption class="story-caption">Syracuse men’s basketball upset then-No. 7 North Carolina on Feb. 13, 2024, a peak of the Adrian Autry era. But since then, the Orange have faltered. Here are the defining moments of the two years since that upset.</figcaption>
+                    <div style="width: 100%; aspect-ratio: 4/3; overflow: hidden; border-radius: 4px; border: 2px solid var(--dark-brown);">
+                        <img 
+                        src="https://dailyorange.s3.amazonaws.com/wp-content/uploads/2026/02/18190427/DOM_ARNAVPOKHREL_SP_MBBUNC1_02132024_183.jpg" 
+                        alt="Syracuse Students on Court After UNC Win"
+                        style="width: 100%; height: 100%; object-fit: cover; display: block;"
+                        />
+                    </div>
+                    <figcaption class="story-caption">Syracuse’s upset win over North Carolina in 2024 serves as the signature moment of head coach Adrian Autry’s three seasons at the helm.</figcaption>
                 </figure>
             </div>
         </article>
@@ -832,13 +854,19 @@
                 <div class="story-text">
                     <div class="story-kicker">Men’s Basketball</div>
                     <h3 class="story-headline">INHERITED EXPECTATIONS</h3>
-                    <p class="story-dek">Adrian Autry, Hubert Davis strive to meet legendary predecessors’ standard</p>
+                    <p class="story-dek">Syracuse’s Adrian Autry and North Carolina’s Hubert Davis have both succeeded legendary head coaches. They’ve struggled to follow legendary predecessors.</p>
                     <div class="story-byline">By: Cooper Andrews | Senior Staff Writer</div>
                     <a href="#" class="story-link">Read More →</a>
                 </div>
                 <figure class="story-figure">
-                    <div class="story-image-placeholder">Story Image 3</div>
-                    <figcaption class="story-caption">Both Adrian Autry and Hubert Davis had to follow the footsteps of legendary head coaches in Jim Boeheim and Roy Williams. Though their programs are in vastly different spots, pressure remains for both to live up to their predecessors as they face off Saturday. </figcaption>
+                    <div style="width: 100%; aspect-ratio: 4/3; overflow: hidden; border-radius: 4px; border: 2px solid var(--dark-brown);">
+                        <img 
+                        src="https://dailyorange.s3.amazonaws.com/wp-content/uploads/2026/02/18214820/a3.png" 
+                        alt="Coaches Collage"
+                        style="width: 100%; height: 100%; object-fit: cover; display: block;"
+                        />
+                    </div>
+                    <figcaption class="story-caption">Adrian Autry and Hubert Davis each followed legendary, NCAA title-winning head coaches. Though their programs are in vastly different spots, pressure remains for both to live up to their predecessors as they face off Saturday.</figcaption>
                 </figure>
             </div>
         </article>
@@ -848,40 +876,43 @@
             <div class="story-content">
                 <div class="story-text">
                     <div class="story-kicker">Men’s Basketball</div>
-                    <h3 class="story-headline">[HEADLINE 4]</h3>
-                    <p class="story-dek">[Story blurb 4]</p>
+                    <h3 class="story-headline">OPPONENT PREVIEW</h3>
+                    <p class="story-dek">North Carolina beat Syracuse 87-77 when the squads last met in early February. Our beat writer previews the Tar Heels, who may be without star forward Caleb Wilson for the third consecutive game.</p>
                     <div class="story-byline">By: Justin Girshon | Senior Staff Writer</div>
                     <a href="#" class="story-link">Read More →</a>
                 </div>
                 <figure class="story-figure">
-                    <div class="story-image-placeholder">Story Image 4</div>
+                    <div style="width: 100%; aspect-ratio: 4/3; overflow: hidden; border-radius: 4px; border: 2px solid var(--dark-brown);">
+                        <img 
+                        src="https://dailyorange.s3.amazonaws.com/wp-content/uploads/2026/02/18215440/oppo_TaraDeluca_AEP_MBB_02142026-91-scaled.jpg" 
+                        alt="Syracuse Basketball Court"
+                        style="width: 100%; height: 100%; object-fit: cover; display: block;"
+                        />
+                    </div>
                     <figcaption class="story-caption">North Carolina beat Syracuse 87-77 when the squads last met in early February. Our beat writer previews the Tar Heels, who may be without star forward Caleb Wilson for the third consecutive game.</figcaption>
                 </figure>
             </div>
         </article>
-
-        <!-- Feature Quote 2 -->
-        <aside class="feature-quote">
-            <blockquote>
-                <p>"[Second impactful quote from Nicholas]"</p>
-                <cite>— [Player/Coach Name], [Position/Title]</cite>
-            </blockquote>
-        </aside>
 
         <!-- Story 5: Beat Writer Prediction (goes last) -->
         <article class="story story-beat-prediction">
             <div class="story-content">
                 <div class="story-text">
                     <div class="story-kicker">Men's Basketball</div>
-                    <h3 class="story-headline">[BEAT WRITER PREDICTION HEADLINE]</h3>
-                    <p class="story-dek">[Beat writer prediction blurb - season outlook and predictions from the beat writers]</p>
+                    <h3 class="story-headline">BEAT WRITER PREDICTION</h3>
+                    <p class="story-dek">Syracuse lost to No. 3 Duke 101-64 Monday, its largest Atlantic Coast Conference defeat since joining the league in 2013. Our beat writers are split on whether the Orange will pick up a big ranked win over the No. 16 Tar Heels on Saturday.</p>
                     <div class="story-byline">By: Daily Orange Sports Staff</div>
                     <a href="#" class="story-link">Read More →</a>
                 </div>
                 <figure class="story-figure">
-                    <div class="story-image-placeholder">Beat Writer Prediction Image</div>
-                    <figcaption class="story-caption">Syracuse lost to No. 3 Duke 101-64 Monday, its largest Atlantic Coast Conference defeat since joining the league in 2013. Our beat writers are split on whether the Orange will pick up a big ranked win over the No. 16 Tar Heels on Saturday. 
-                    </figcaption>
+                    <div style="width: 100%; aspect-ratio: 4/3; overflow: hidden; border-radius: 4px; border: 2px solid var(--dark-brown);">
+                        <img 
+                        src="https://dailyorange.s3.amazonaws.com/wp-content/uploads/2026/02/18220436/bwp_TaraDeluca_AEP_MBB_02142026-139-scaled.jpg" 
+                        alt="Syracuse Basketball Players"
+                        style="width: 100%; height: 100%; object-fit: cover; display: block;"
+                        />
+                    </div>
+                    <figcaption class="story-caption">Syracuse lost to No. 3 Duke 101-64 Monday, its largest Atlantic Coast Conference defeat since joining the league in 2013.</figcaption>
                 </figure>
             </div>
         </article>
@@ -893,7 +924,7 @@
         <h3 class="sponsors-title">Thank You To Our Sponsors</h3>
         <div class="sponsors-container">
             <a class="sponsor-logo sponsor-logo-apex" href="https://www.apexentertainment.com/syracuse/" target="_blank">
-                <img src="assets/ApexSYC_Vertical_Color_Logo-01-1.png" alt="Apex Entertainment">
+                <img src="https://dailyorange.s3.amazonaws.com/wp-content/uploads/2026/01/29014527/ApexSYC_Vertical_Color_Logo-01-1.png" alt="Apex Entertainment">
             </a>
         </div>
     </section>
@@ -930,8 +961,8 @@
     <!-- JavaScript for Countdown Timer -->
     <script>
         function updateCountdown() {
-            // Tipoff: February 19, 2026 at 7:00 PM EST
-            const gameDate = new Date('2026-02-18T19:00:00-05:00');
+            // Tipoff: February 21, 2026 at 1:00 PM EST
+            const gameDate = new Date('2026-02-21T13:00:00-05:00');
             const now = new Date();
             
             // Calculate difference in milliseconds

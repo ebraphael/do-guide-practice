@@ -1203,7 +1203,7 @@
             <script>
                 function updateCountdown() {
                     // Game date: February 1, 2026 at 1:00 PM EST
-                    const gameDate = new Date('2026-02-01T13:00:00-05:00');
+                    const gameDate = new Date('2026-02-21T13:00:00-05:00');
                     const now = new Date();
                     
                     // Calculate difference in milliseconds
