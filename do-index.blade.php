@@ -1165,9 +1165,6 @@
                     <a class="sponsor-logo" href = "https://www.apexentertainment.com/syracuse/" target="_blank">
                         <img src="https://dailyorange.s3.amazonaws.com/wp-content/uploads/2026/01/29014527/ApexSYC_Vertical_Color_Logo-01-1.png" alt="Apex Entertainment">
                     </a>
-                    <a class="sponsor-logo" href = "https://skytopliquors.com/" target="_blank">
-                        <img src="https://dailyorange.s3.amazonaws.com/wp-content/uploads/2026/01/29014514/skytop-logo.png" alt="Skytop Liquors">
-                    </a>
                 </div>
             </section>
 
